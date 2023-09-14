@@ -14,7 +14,7 @@ import dao.ContactDAO;
 import dto.ContactDTO;
 
 @WebServlet("*.contacts")
-public class ContactsController extends HttpServlet {
+public class ContactController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
