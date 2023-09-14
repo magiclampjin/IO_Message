@@ -9,10 +9,8 @@
 </head>
 <body>
 
-	<c:forEach var="i" items="${list }">
-		
-				${i.seq } : ${i.name } : ${i.contact }<br>
-		
+	<c:forEach var="i" items="${list }">	
+				${i.seq } : ${i.name } : ${i.contact }<br>		
 	</c:forEach>
 	
 </body>
