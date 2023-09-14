@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("*.message")
-public class MessageController extends HttpServlet {
+@WebServlet("*.contacts")
+public class ContactsController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
@@ -17,7 +17,7 @@ public class MessageController extends HttpServlet {
 		String cmd = request.getRequestURI();
 		
 		try {
-			if(cmd.equals("")) {
+			if(cmd.equals("/insert.contacts")) {
 				
 			}else if(cmd.equals("")) {
 				
