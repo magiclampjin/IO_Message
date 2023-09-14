@@ -35,7 +35,7 @@ public class ContactDAO {
 	
 	public List<ContactDTO> selectAll() throws Exception {
 		List<ContactDTO> list = new ArrayList<>();
-		String sql = "select * from Contact";
+		String sql = "select * from contact";
 		try(
 				Connection con = this.getConnection();
 				PreparedStatement pst = con.prepareStatement(sql);
@@ -51,8 +51,22 @@ public class ContactDAO {
 				dto.setContact(contact);
 				list.add(dto);
 			}
+			
 		}
 		return list;
+	}
+	
+	public int insertContact(int seq, String name, String contact) throws Exception {
+		String sql = "insert into contact values(?,?,?)";
+		try(
+				Connection con = this.getConnection();
+				PreparedStatement pst = con.prepareStatement(sql);
+				){
+			pst.setInt(1,seq);
+			pst.setString(2,name);
+			pst.setString(3,contact);
+			return pst.executeUpdate();
+		}
 	}
 	
 }
