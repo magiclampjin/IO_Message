@@ -19,7 +19,7 @@ public class ContactsController extends HttpServlet {
 		try {
 			if(cmd.equals("/insert.contacts")) {
 				
-			}else if(cmd.equals("")) {
+			}else if(cmd.equals("/Listing.contacts")) {
 				
 			}else if(cmd.equals("")) {
 				
