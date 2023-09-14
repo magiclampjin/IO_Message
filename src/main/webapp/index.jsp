@@ -21,7 +21,7 @@
 		<tbody>
 			<tr>
 				<td>
-					<a href="input_form.html">toInput</a>
+					<a href="input_form.jsp">toInput</a>
 				</td>
 				<td>
 					<a href="/Listing.contacts">toOutput</a> 
