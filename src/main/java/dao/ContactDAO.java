@@ -51,7 +51,6 @@ public class ContactDAO {
 				dto.setContact(contact);
 				list.add(dto);
 			}
-			
 		}
 		return list;
 	}
@@ -67,5 +66,4 @@ public class ContactDAO {
 			return pst.executeUpdate();
 		}
 	}
-	
 }
