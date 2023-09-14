@@ -1,12 +1,17 @@
 package Controllers;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import dao.ContactDAO;
+import dto.ContactDTO;
 
 @WebServlet("*.contacts")
 public class ContactsController extends HttpServlet {
@@ -15,16 +20,18 @@ public class ContactsController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		String cmd = request.getRequestURI();
+		ContactDAO dao = ContactDAO.getInstance();
 		
 		try {
 			if(cmd.equals("/insert.contacts")) {
+				String writer = request.getParameter("name");
+				String contact = request.getParameter("contact");
 				
-			}else if(cmd.equals("/Listing.contacts")) {
-				
-			}else if(cmd.equals("")) {
-				
-			}else if(cmd.equals("")) {
-				
+			}else if(cmd.equals("/listing.contacts")) {
+				List<ContactDTO> list = new ArrayList<>();
+				list = dao.selectAll();
+				request.setAttribute("list", list);
+				request.getRequestDispatcher("/output_form.jsp").forward(request, response);
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
