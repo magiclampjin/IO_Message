@@ -1,6 +1,7 @@
 package Controllers;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,7 +12,24 @@ import javax.servlet.http.HttpServletResponse;
 public class MessageController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+		request.setCharacterEncoding("UTF-8");
+		
+		String cmd = request.getRequestURI();
+		
+		try {
+			if(cmd.equals("")) {
+				
+			}else if(cmd.equals("")) {
+				
+			}else if(cmd.equals("")) {
+				
+			}else if(cmd.equals("")) {
+				
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+			response.sendRedirect("/error.html");
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
