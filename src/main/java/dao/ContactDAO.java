@@ -56,15 +56,14 @@ public class ContactDAO {
 		return list;
 	}
 	
-	public int insertContact(int seq, String name, String contact) throws Exception {
-		String sql = "insert into contact values(?,?,?)";
+	public int insertContact(String name, String contact) throws Exception {
+		String sql = "insert into contact values(0,?,?)";
 		try(
 				Connection con = this.getConnection();
 				PreparedStatement pst = con.prepareStatement(sql);
 				){
-			pst.setInt(1,seq);
-			pst.setString(2,name);
-			pst.setString(3,contact);
+			pst.setString(1,name);
+			pst.setString(2,contact);
 			return pst.executeUpdate();
 		}
 	}
