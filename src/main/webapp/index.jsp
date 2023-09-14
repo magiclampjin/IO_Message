@@ -9,6 +9,26 @@
 <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 </head>
 <body>
-
+	<table border="1" align=center>
+		<thead>
+			<tr>
+				<th colspan="2">
+					Index
+				</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr>
+				<td>
+					<a href="input_form.html">toInput</a>
+				</td>
+				<td>
+					<a href="/Listing.Contacts">toOutput</a> 
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
 </body>
 </html>
