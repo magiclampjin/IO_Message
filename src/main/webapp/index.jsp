@@ -24,7 +24,7 @@
 					<a href="input_form.html">toInput</a>
 				</td>
 				<td>
-					<a href="/Listing.Contacts">toOutput</a> 
+					<a href="/Listing.contacts">toOutput</a> 
 				</td>
 			</tr>
 			
